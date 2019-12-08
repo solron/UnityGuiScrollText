@@ -23,7 +23,6 @@ public class GuiMover : MonoBehaviour
         myRectTransform.GetWorldCorners(v);
         if (v[3].x < 0) // 3 is lower right corner, and we check if that has left the screen
         {
-            Debug.Log(v[3].x);
             Destroy(gameObject);
         }
     }

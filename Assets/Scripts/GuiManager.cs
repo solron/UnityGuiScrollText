@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 public class GuiManager : MonoBehaviour
 {
-    public GameObject uiText;
-    public float waitTime;
-    public float yPosition; // 0 is at the bottom
+    public GameObject uiText;   // These public variables are set in the inspector
+    public float waitTime;  
+    public float yPosition;     // 0 is at the bottom
     public string[] textMessages;
 
     void Start()
