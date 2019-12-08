@@ -2,7 +2,7 @@
 
 public class GuiMover : MonoBehaviour
 {
-    float speed = 5f;
+    float speed = 5f;   // Speed of the text
     RectTransform myRectTransform;
 
     void Start()
