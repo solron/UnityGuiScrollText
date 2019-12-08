@@ -7,8 +7,8 @@ public class GuiManager : MonoBehaviour
     //public GameObject myMessages;
     public GameObject uiText;
     public float waitTime;
+    public float yPosition; // 0 is at the bottom
     public string[] textMessages;
-    int counter = 1;
 
     void Start()
     {
@@ -20,17 +20,12 @@ public class GuiManager : MonoBehaviour
         for(int x = 0; x < textMessages.Length; x++)
         {
             SpawnText(textMessages[x]);
-            counter++;
-            yield return new WaitForSeconds(waitTime);
 
-            if (x == textMessages.Length - 1)
-            {
+            yield return new WaitForSeconds(waitTime); // pauses the for loop for x amount of seconds
+
+            if (x == textMessages.Length - 1)           // Remove this if you dont want the text to loop
                 x = -1;
-                counter = 1;
-            }
-        }
-
-        // If you want to run it in a loop
+        } 
     }
 
     void SpawnText(string textMessage)
@@ -38,7 +33,7 @@ public class GuiManager : MonoBehaviour
         gameObject.SetActive(true);
         GameObject canvas = GameObject.Find("Canvas");
         uiText.GetComponent<Text>().text = textMessage;
-        GameObject text = Instantiate(uiText, new Vector3(Screen.width + 50, 290, 0), Quaternion.identity);
+        GameObject text = Instantiate(uiText, new Vector3(Screen.width + 50, yPosition, 0), Quaternion.identity);
         text.transform.SetParent(canvas.transform);
     }
 }
