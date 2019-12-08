@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class GuiManager : MonoBehaviour
 {
-    //public GameObject myMessages;
     public GameObject uiText;
     public float waitTime;
     public float yPosition; // 0 is at the bottom
