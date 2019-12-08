@@ -34,9 +34,9 @@ An IEnumerator has to be made instead of a method, since we want to pause the fo
 
 
 The IEnumerator MyCoroutine() cycle thru all of the lines of text, spawns the text, wait for x amount of seconds. At the bottom of the
-for-loop you will see this code:
-´´´
+for-loop you will see this code:<br>
+```
 if (x == textMessages.Length - 1)
     x = -1;
-´´´
+```
 This loops the text by reseting the x once the last line of text is read.<br>
