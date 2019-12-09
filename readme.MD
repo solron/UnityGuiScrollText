@@ -40,3 +40,7 @@ if (x == textMessages.Length - 1)
     x = -1;
 ```
 This loops the text by reseting the x once the last line of text is read.<br>
+
+<h3>Demo of how it looks</h3>
+
+[![Demo Video](https://img.youtube.com/vi/y4fluiJpNVc/0.jpg)](https://www.youtube.com/watch?v=y4fluiJpNVc)
